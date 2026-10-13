@@ -14,6 +14,10 @@ Parameters:
 
 Usage Example:
     EXEC bronze.load_bronze;
+
+Note:
+    Update the dataset CSV file paths in the BULK INSERT statements to match
+    the local or network directory where the source files reside.
 ===============================================================================
 */
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
@@ -131,11 +135,11 @@ BEGIN
 		PRINT '=========================================='
 	END TRY
 	BEGIN CATCH
-		PRINT '=========================================='
-		PRINT 'ERROR OCCURED DURING LOADING BRONZE LAYER'
-		PRINT 'Error Message' + ERROR_MESSAGE();
-		PRINT 'Error Message' + CAST (ERROR_NUMBER() AS NVARCHAR);
-		PRINT 'Error Message' + CAST (ERROR_STATE() AS NVARCHAR);
-		PRINT '=========================================='
+		PRINT '==========================================';
+		PRINT 'ERROR OCCURRED DURING LOADING BRONZE LAYER';
+		PRINT 'Error Message: ' + ERROR_MESSAGE();
+		PRINT 'Error Number:  ' + CAST(ERROR_NUMBER() AS NVARCHAR);
+		PRINT 'Error State:   ' + CAST(ERROR_STATE() AS NVARCHAR);
+		PRINT '==========================================';
 	END CATCH
 END

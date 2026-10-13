@@ -19,7 +19,11 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Ignore exported data or diagrams (if applicable)
+# Ignore exported data
 *.csv
-*.png
+
+# Ignore general exported media or diagrams (allow docs/ and assets/ images)
 *.pdf
+*.png
+!docs/*.png
+!assets/*.png

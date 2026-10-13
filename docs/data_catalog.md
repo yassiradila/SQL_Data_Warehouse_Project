@@ -20,7 +20,7 @@ The Gold Layer is the business-level data representation, structured to support 
 | marital_status   | NVARCHAR(50)  | The marital status of the customer (e.g., 'Married', 'Single').                              |
 | gender           | NVARCHAR(50)  | The gender of the customer (e.g., 'Male', 'Female', 'n/a').                                  |
 | birthdate        | DATE          | The date of birth of the customer, formatted as YYYY-MM-DD (e.g., 1971-10-06).               |
-| create_date      | DATE          | The date and time when the customer record was created in the system|
+| create_date      | DATE          | The date and time when the customer record was created in the system.                         |
 
 ---
 
@@ -37,10 +37,10 @@ The Gold Layer is the business-level data representation, structured to support 
 | category_id         | NVARCHAR(50)  | A unique identifier for the product's category, linking to its high-level classification.     |
 | category            | NVARCHAR(50)  | The broader classification of the product (e.g., Bikes, Components) to group related items.  |
 | subcategory         | NVARCHAR(50)  | A more detailed classification of the product within the category, such as product type.      |
-| maintenance_required| NVARCHAR(50)  | Indicates whether the product requires maintenance (e.g., 'Yes', 'No').                       |
+| maintenance         | NVARCHAR(50)  | Indicates whether the product requires maintenance (e.g., 'Yes', 'No').                       |
 | cost                | INT           | The cost or base price of the product, measured in monetary units.                            |
 | product_line        | NVARCHAR(50)  | The specific product line or series to which the product belongs (e.g., Road, Mountain).      |
-| start_date          | DATE          | The date when the product became available for sale or use, stored in|
+| start_date          | DATE          | The date when the product became available for sale or use.                                   |
 
 ---
 
